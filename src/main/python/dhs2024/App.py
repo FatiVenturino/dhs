@@ -7,7 +7,7 @@ from compiladoresParser import compiladoresParser
 def main(argv):
     # archivo = "input/entrada.txt"
     # archivo = "input/parentesis.txt"
-    archivo = "input/programa.txt"
+    archivo = "input/opal.txt"
     if len(argv) > 1 :
         archivo = argv[1]
     input = FileStream(archivo)
@@ -15,7 +15,7 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     parser = compiladoresParser(stream)
     tree = parser.programa()
-    # print(tree.toStringTree(recog=parser))
+    print(tree.toStringTree(recog=parser))
 
 if __name__ == '__main__':
     main(sys.argv)
